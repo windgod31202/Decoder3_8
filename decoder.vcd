@@ -1,0 +1,133 @@
+$date
+	Wed Mar 23 17:18:49 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder_3_8_tb $end
+$scope module decoder_1 $end
+$var wire 1 ! E $end
+$var wire 1 " E1 $end
+$var wire 1 # G1 $end
+$var wire 1 $ G2 $end
+$var wire 3 % In [2:0] $end
+$var wire 8 & Out [7:0] $end
+$scope module block1 $end
+$var wire 1 # E $end
+$var wire 2 ' In [1:0] $end
+$var wire 4 ( Out [3:0] $end
+$upscope $end
+$scope module block2 $end
+$var wire 1 $ E $end
+$var wire 2 ) In [1:0] $end
+$var wire 4 * Out [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module decoder_3_8_tb $end
+$scope module clkgen_1 $end
+$var wire 1 + clka $end
+$var wire 1 , clkb $end
+$var reg 1 - clka_out $end
+$var reg 1 . clkb_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0.
+0-
+0,
+0+
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+0$
+0#
+1"
+0!
+$end
+#10
+b1 &
+b1 *
+1$
+1-
+1!
+1+
+#20
+b10 &
+b10 *
+b1 '
+b1 )
+0-
+1.
+b1 %
+0+
+1,
+#30
+b100 &
+b100 *
+b10 '
+b10 )
+1-
+b10 %
+1+
+#40
+b1000 &
+b1000 *
+b11 '
+b11 )
+0-
+0.
+b11 %
+0+
+0,
+#50
+0$
+b1 (
+0"
+1#
+b10000 &
+b0 *
+b0 '
+b0 )
+1-
+b100 %
+1+
+#60
+b100000 &
+b10 (
+b1 '
+b1 )
+0-
+1.
+b101 %
+0+
+1,
+#70
+b1000000 &
+b100 (
+b10 '
+b10 )
+1-
+b110 %
+1+
+#80
+b10000000 &
+b1000 (
+b11 '
+b11 )
+0-
+0.
+b111 %
+0+
+0,
+#90
+1-
+1+

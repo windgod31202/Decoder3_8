@@ -1,0 +1,183 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000261f8106890 .scope module, "decoder_3_8_tb" "decoder_3_8_tb" 2 1;
+ .timescale 0 0;
+v00000261f8083700_0 .var "E_tb", 0 0;
+v00000261f80832a0_0 .var "In_tb", 2 0;
+v00000261f80842e0_0 .net "Out_tb", 7 0, L_00000261f8083a20;  1 drivers
+v00000261f80838e0_0 .var "clka", 0 0;
+v00000261f8082d00_0 .net "clka_out", 0 0, v00000261f8018c50_0;  1 drivers
+v00000261f8083e80_0 .var "clkb", 0 0;
+v00000261f8083980_0 .net "clkb_out", 0 0, v00000261f8018570_0;  1 drivers
+S_00000261f8106a20 .scope module, "clkgen_1" "clkgen" 2 8, 3 21 0, S_00000261f8106890;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clka";
+    .port_info 1 /INPUT 1 "clkb";
+    .port_info 2 /OUTPUT 1 "clka_out";
+    .port_info 3 /OUTPUT 1 "clkb_out";
+v00000261f8017f30_0 .net "clka", 0 0, v00000261f80838e0_0;  1 drivers
+v00000261f8018c50_0 .var "clka_out", 0 0;
+v00000261f8017fd0_0 .net "clkb", 0 0, v00000261f8083e80_0;  1 drivers
+v00000261f8018570_0 .var "clkb_out", 0 0;
+E_00000261f8017a40 .event anyedge, v00000261f8017fd0_0;
+E_00000261f8017400 .event anyedge, v00000261f8017f30_0;
+S_00000261f8106bb0 .scope module, "decoder_1" "decoder_3_8" 2 7, 3 9 0, S_00000261f8106890;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "E";
+    .port_info 1 /INPUT 3 "In";
+    .port_info 2 /OUTPUT 8 "Out";
+L_00000261f802abc0 .functor NOT 1, L_00000261f8084380, C4<0>, C4<0>, C4<0>;
+L_00000261f802b1e0 .functor AND 1, v00000261f8083700_0, L_00000261f80841a0, C4<1>, C4<1>;
+L_00000261f802ad10 .functor AND 1, v00000261f8083700_0, L_00000261f802abc0, C4<1>, C4<1>;
+v00000261f8018bb0_0 .net "E", 0 0, v00000261f8083700_0;  1 drivers
+v00000261f80189d0_0 .net "E1", 0 0, L_00000261f802abc0;  1 drivers
+v00000261f8017d50_0 .net "G1", 0 0, L_00000261f802b1e0;  1 drivers
+v00000261f8017df0_0 .net "G2", 0 0, L_00000261f802ad10;  1 drivers
+v00000261f80182f0_0 .net "In", 2 0, v00000261f80832a0_0;  1 drivers
+v00000261f8018390_0 .net "Out", 7 0, L_00000261f8083a20;  alias, 1 drivers
+v00000261f8083660_0 .net *"_ivl_1", 0 0, L_00000261f8084380;  1 drivers
+v00000261f8083fc0_0 .net *"_ivl_3", 0 0, L_00000261f80841a0;  1 drivers
+L_00000261f8084380 .part v00000261f80832a0_0, 2, 1;
+L_00000261f80841a0 .part v00000261f80832a0_0, 2, 1;
+L_00000261f8082ee0 .part v00000261f80832a0_0, 0, 2;
+L_00000261f80837a0 .part v00000261f80832a0_0, 0, 2;
+L_00000261f8083a20 .concat8 [ 4 4 0 0], L_00000261f8084600, L_00000261f8083d40;
+S_00000261f8029690 .scope module, "block1" "decoder_2_4" 3 17, 3 1 0, S_00000261f8106bb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "E";
+    .port_info 1 /INPUT 2 "In";
+    .port_info 2 /OUTPUT 4 "Out";
+v00000261f8018070_0 .net "E", 0 0, L_00000261f802b1e0;  alias, 1 drivers
+v00000261f80187f0_0 .net "In", 1 0, L_00000261f8082ee0;  1 drivers
+v00000261f8018890_0 .net "Out", 3 0, L_00000261f8083d40;  1 drivers
+L_00000261f8084868 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v00000261f8018930_0 .net/2u *"_ivl_0", 3 0, L_00000261f8084868;  1 drivers
+v00000261f8018a70_0 .net *"_ivl_2", 3 0, L_00000261f8083840;  1 drivers
+L_00000261f80848b0 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v00000261f8018b10_0 .net/2u *"_ivl_4", 3 0, L_00000261f80848b0;  1 drivers
+L_00000261f8083840 .shift/l 4, L_00000261f8084868, L_00000261f8082ee0;
+L_00000261f8083d40 .functor MUXZ 4, L_00000261f80848b0, L_00000261f8083840, L_00000261f802b1e0, C4<>;
+S_00000261f8029820 .scope module, "block2" "decoder_2_4" 3 18, 3 1 0, S_00000261f8106bb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "E";
+    .port_info 1 /INPUT 2 "In";
+    .port_info 2 /OUTPUT 4 "Out";
+v00000261f8018610_0 .net "E", 0 0, L_00000261f802ad10;  alias, 1 drivers
+v00000261f8018430_0 .net "In", 1 0, L_00000261f80837a0;  1 drivers
+v00000261f80186b0_0 .net "Out", 3 0, L_00000261f8084600;  1 drivers
+L_00000261f80848f8 .functor BUFT 1, C4<0001>, C4<0>, C4<0>, C4<0>;
+v00000261f8018110_0 .net/2u *"_ivl_0", 3 0, L_00000261f80848f8;  1 drivers
+v00000261f80181b0_0 .net *"_ivl_2", 3 0, L_00000261f8082c60;  1 drivers
+L_00000261f8084940 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v00000261f8018250_0 .net/2u *"_ivl_4", 3 0, L_00000261f8084940;  1 drivers
+L_00000261f8082c60 .shift/l 4, L_00000261f80848f8, L_00000261f80837a0;
+L_00000261f8084600 .functor MUXZ 4, L_00000261f8084940, L_00000261f8082c60, L_00000261f802ad10, C4<>;
+    .scope S_00000261f8106a20;
+T_0 ;
+    %wait E_00000261f8017400;
+    %load/vec4 v00000261f8017f30_0;
+    %store/vec4 v00000261f8018c50_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_00000261f8106a20;
+T_1 ;
+    %wait E_00000261f8017a40;
+    %load/vec4 v00000261f8017fd0_0;
+    %store/vec4 v00000261f8018570_0, 0, 1;
+    %jmp T_1;
+    .thread T_1, $push;
+    .scope S_00000261f8106890;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000261f80838e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000261f8083e80_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_00000261f8106890;
+T_3 ;
+    %delay 10, 0;
+    %load/vec4 v00000261f80838e0_0;
+    %inv;
+    %store/vec4 v00000261f80838e0_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_00000261f8106890;
+T_4 ;
+    %delay 20, 0;
+    %load/vec4 v00000261f8083e80_0;
+    %inv;
+    %store/vec4 v00000261f8083e80_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_00000261f8106890;
+T_5 ;
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 0, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 2, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 3, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 4, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 5, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 6, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000261f8083700_0, 0, 1;
+    %pushi/vec4 7, 0, 3;
+    %store/vec4 v00000261f80832a0_0, 0, 3;
+    %delay 10, 0;
+    %vpi_call 2 28 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+    .scope S_00000261f8106890;
+T_6 ;
+    %vpi_call 2 31 "$dumpfile", "decoder.vcd" {0 0 0};
+    %vpi_call 2 32 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000261f8106bb0 {0 0 0};
+    %vpi_call 2 33 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000261f8106a20 {0 0 0};
+    %end;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "decoder8_3_tb.v";
+    "decoder3_8.v";
